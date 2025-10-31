@@ -12,16 +12,15 @@
                     font-family: "Microsoft YaHei", sans-serif;
                 }
         
-                /* 设置视频背景样式 */
-                #background-iframe {
-                           position: fixed;
-                           right: 0;
-                           bottom: 0;
-                           min-width: 100%;
-                           min-height: 100%;
-                           z-index: -1;
-                           border: none;
-                       }
+                #background-gif {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; /* 使图片覆盖整个区域且保持比例 */
+                    z-index: -1; /* 将其置于底层 */
+                }
         
                 body {
                     display: flex;
@@ -91,8 +90,8 @@
             </style>
 </head>
 <body>
-	<iframe id="background-iframe" src="//player.bilibili.com/player.html?isOutside=true&aid=115467914189847&bvid=BV1mK1KBkE24&cid=33557710400&p=1"
-	        scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+	<img src="img/生成美食动图.gif" alt="背景动图" id="background-gif">
+
     <div class="container">
         <h2>选择食堂</h2>
         <div class="radio-group">
@@ -1196,6 +1195,7 @@
            { shop: "味香源", dish: "扬州炒饭", addon: "无", price: "11", taste: "无", floor: "二楼" },
            { shop: "味香源", dish: "青椒肉丝炒饭", addon: "无", price: "12", taste: "无", floor: "二楼" },
            { shop: "味香源", dish: "腊肉豆米炒饭", addon: "无", price: "12", taste: "无", floor: "二楼" },
+
 
             // 更多二食堂数据...
         ];
